@@ -1,0 +1,26 @@
+{
+  "name": "vuepress-util",
+  "version": "0.0.2",
+  "description": "VuePress快速建站工具支持",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shoppingzh/vuepress-util.git"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "vuepress",
+    "util"
+  ],
+  "author": "xpzheng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shoppingzh/vuepress-util/issues"
+  },
+  "homepage": "https://github.com/shoppingzh/vuepress-util#readme"
+}
