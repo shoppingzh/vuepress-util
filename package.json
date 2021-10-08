@@ -1,6 +1,6 @@
 {
   "name": "vuepress-util",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "VuePress快速建站工具支持",
   "main": "index.js",
   "scripts": {
@@ -22,5 +22,11 @@
   "bugs": {
     "url": "https://github.com/shoppingzh/vuepress-util/issues"
   },
-  "homepage": "https://github.com/shoppingzh/vuepress-util#readme"
+  "homepage": "https://github.com/shoppingzh/vuepress-util#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
 }
