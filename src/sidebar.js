@@ -28,7 +28,7 @@ export function generateSidebar() {
       .filter(o => o.isDirectory()) // 目录
       .filter(f => !/^\./.test(f.name)) // 非以.开头的目录
     dirs.forEach(dir => {
-      const dirPath = join(path, dir.name, '/')
+      const dirPath = join(path, dir.name)
       const files = listFiles(join(docPath, dirPath))
       const docFiles = files.filter(f => /md/i.test(getExtension(f.name)))
       if (docFiles.length) {
@@ -42,7 +42,7 @@ export function generateSidebar() {
             return ao - bo
           })
         }
-        conf[dirPath] = docFiles.map(f => ([
+        conf[join('/', dirPath, '/')] = docFiles.map(f => ([
           f.name,
           f.name
         ]))
