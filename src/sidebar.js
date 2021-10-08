@@ -42,8 +42,10 @@ export function generateSidebar() {
             return ao - bo
           })
         }
-        conf[join('/', dirPath, '/')] = docFiles.map(f => ([
-          f.name,
+        // 解决Windows下join为\\的问题
+        const path = join('/', dirPath, '/').replace(/\\+/g, '/')
+        conf[path] = docFiles.map(f => ([
+          getBasename(f.name),
           f.name
         ]))
       }
