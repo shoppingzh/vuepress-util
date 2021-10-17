@@ -1,6 +1,6 @@
 {
   "name": "vuepress-util",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "VuePress快速建站工具支持",
   "main": "index.js",
   "scripts": {

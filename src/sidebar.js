@@ -1,4 +1,5 @@
 import { resolve, join } from 'path'
+import { normalJoin } from './path'
 import { readdirSync, readFileSync } from 'fs'
 import { listFiles, getExtension, getBasename } from './file'
 
@@ -43,7 +44,7 @@ export function generateSidebar() {
           })
         }
         // 解决Windows下join为\\的问题
-        const path = join('/', dirPath, '/').replace(/\\+/g, '/')
+        const path = normalJoin('/', dirPath, '/')
         conf[path] = docFiles.map(f => ([
           getBasename(f.name),
           f.name

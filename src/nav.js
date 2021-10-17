@@ -1,4 +1,5 @@
 import { resolve, join } from 'path'
+import { normalJoin } from './path'
 import { listFiles, getBasename, getExtension, isFile } from './file'
 
 const docPath = resolve(process.cwd(), 'docs')
@@ -17,16 +18,16 @@ export function generateNav(navs) {
     } else {
       const filePath = join(docPath, path)
       if (isFile(filePath)) {
-        conf.link = join('/', path)
+        conf.link = normalJoin('/', path)
       } else {
         const files = listFiles(filePath, f => /^md$/i.test(getExtension(f.name)))
         if (!files || !files.length) return conf
         if (!navItem.docs) {
-          conf.link = join('/', path, files[0].name)
+          conf.link = normalJoin('/', path, files[0].name)
         } else {
           conf.items = files.map(f => ({
             text: getBasename(f.name),
-            link: join('/', path, f.name)
+            link: normalJoin('/', path, f.name)
           }))
         }
       }
