@@ -3,6 +3,8 @@ yarn.lock
 package-lock.json
 
 
+docs
+
 # dist
 dist
 /lib
