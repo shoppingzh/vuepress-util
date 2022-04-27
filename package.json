@@ -1,6 +1,6 @@
 {
   "name": "vuepress-util",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "VuePress快速建站工具支持",
   "main": "index.js",
   "scripts": {
@@ -28,5 +28,10 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.2",
+    "tslib": "^2.4.0",
+    "typescript": "^4.6.3"
   }
 }

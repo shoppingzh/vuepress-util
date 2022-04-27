@@ -4,13 +4,19 @@ import { listFiles, getBasename, getExtension, isFile } from './file'
 
 const docPath = resolve(process.cwd(), 'docs')
 
+interface NavConfig {
+  text?: string,
+  link?: string,
+  items?: NavConfig[]
+}
+
 /**
  * 自动生成导航栏
  * @param {Array} navs 导航栏配置
  */
 export function generateNav(navs) {
   const doGenerateNav = (navItem, path = '', depth = 0) => {
-    const conf = {}
+    const conf: NavConfig = {}
     conf.text = navItem.name
     const children = navItem.children
     if (children && children.length) {
