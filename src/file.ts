@@ -1,7 +1,7 @@
 import { Dirent, readdirSync, readFileSync, Stats, statSync } from 'fs'
 import { join } from 'path'
 
-interface File {
+export interface File {
   name: string,
   path: string,
   dirent: Dirent
